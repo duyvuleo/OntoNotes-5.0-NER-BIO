@@ -1,9 +1,12 @@
 import os, glob, itertools
+import sys
 
-def generate_collection(tag="train"):
-    results = itertools.chain.from_iterable(glob.iglob(os.path.join(root,'*.gold_conll'))
-                                               for root, dirs, files in os.walk('./conll-formatted-ontonotes-5.0/data/'+tag))
+def generate_collection(tag="train", language='english', ext='gold_conll'):
+    results = itertools.chain.from_iterable(glob.iglob(os.path.join(root,f'*.{ext}'))
+                                               for root, dirs, files in os.walk(f'./conll-formatted-ontonotes-5.0/data/{tag}') if language in root)
 
+    #print([os.path.join(root,'*.v9_gold_parse_conll') for root, dirs, files in os.walk(f'./conll-formatted-ontonotes-5.0/data/{tag}') if language in root])
+ 
     text =  ""
     for cur_file in results: 
         with open(cur_file, 'r') as f:
@@ -40,10 +43,12 @@ def generate_collection(tag="train"):
             text += '\n'
             # break
 
-    with open("onto."+tag+".ner", 'w') as f:
+    with open("onto."+tag+".ner."+language, 'w') as f:
         f.write(text)
 
 
-generate_collection("train")
-generate_collection("test")
-generate_collection("development")
+generate_collection("train", sys.argv[1], 'v4_gold_conll')
+generate_collection("test", sys.argv[1], 'v4_gold_conll')
+generate_collection("development", sys.argv[1], 'v4_gold_conll')
+generate_collection("conll-2012-test", sys.argv[1], 'v9_gold_parse_conll')
+

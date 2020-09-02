@@ -37,8 +37,8 @@ You can deactive the envrionment now (`$ source deactivate`).
 
 #### Step 3: Combine the data and convert tags within BIO.
 
-Run `python3 agg.py english` to obtain `onto.train.ner.english`, `onto.development.ner.english`, and `onto.test.ner.english` and `onto.conll-2012-test-official.english`.
+Run `python3 agg.py english` to obtain `onto.train.ner.english`, `onto.development.ner.english`, and `onto.test.ner.english` and `onto.conll-2012-test.ner.english`.
 
-Run `python3 agg.py arabic` to obtain `onto.train.ner.arabic`, `onto.development.ner.arabic`, and `onto.test.ner.arabic` and `onto.conll-2012-test-official.arabic`.
+Run `python3 agg.py arabic` to obtain `onto.train.ner.arabic`, `onto.development.ner.arabic`, and `onto.test.ner.arabic` and `onto.conll-2012-test.ner.arabic`.
 
-Run `python3 agg.py chinese` to obtain `onto.train.ner.chinese`, `onto.development.ner.chinese`, and `onto.test.ner.chinese` and `onto.conll-2012-test-official.chinese`.
+Run `python3 agg.py chinese` to obtain `onto.train.ner.chinese`, `onto.development.ner.chinese`, and `onto.test.ner.chinese` and `onto.conll-2012-test.ner.chinese`.
