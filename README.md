@@ -10,6 +10,8 @@ You must obtain the data from LDC (not free) at [https://catalog.ldc.upenn.edu/L
 
 Rename that folder to `ontonotes-release-5.0`, e.g., `mv LDC2013T19 ontonotes-release-5.0`. 
 
+Note that assume that we put the `ontonotes-release-5.0` folder just outside this repo location. 
+
 #### Step 2: Running the script to recover words
 
 The orginal repo of the authors only contains the  *_skel files, which mask the orginal words. Thus, you have to run the script to recover them from the downloaded OntoNotes 5.0 data. The script is based on python 2. If you are using conda, you can create a virtual environment for running python 2 quickly:
