@@ -1,16 +1,14 @@
-# OntoNotes-5.0-NER-BIO (Multilingual Version) adapted from https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO
+# OntoNotes-5.0-NER-BIO (Multilingual Version) adapted from [this repo](https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO)
 
 This is a CoNLL-2003 formatted version with BIO tagging scheme of the OntoNotes 5.0 release for NER in 3 languages (English, Arabic, Chinese). This formatted version is based on the instructions [here](http://cemantix.org/data/ontonotes.html) and a new script created in this repo. 
 
-Simply put, the paper named *[Towards Robust Linguistic Analysis using OntoNotes](http://www.aclweb.org/anthology/W13-3516)* (Yuchen Zhang, Zhi Zhong, CoNLL 2013), proposed a train-dev-split for the OntoNotes 5.0 data, and provided scripts for converting it to CoNLL 2012 format. However, the results are not in BIO tagging scheme and cannot be directly used in many sequence tagging architectures, such as BLSTM-CRFs. This repo simplifies your pre-processing by directly generated the BIO format and you can use them in your experiments.
-
-
-
 #### Step 1: Obtaining the official OntoNotes 5.0 release 
 
-You can download the data at [https://catalog.ldc.upenn.edu/LDC2013T19](https://catalog.ldc.upenn.edu/LDC2013T19), and unpack the data.
+You must obtain the data from LDC (not free) at [https://catalog.ldc.upenn.edu/LDC2013T19](https://catalog.ldc.upenn.edu/LDC2013T19), and unpack the data.
 
 `$ tar zxvf LDC2013T19.tgz`
+
+Rename that folder to `ontonotes-release-5.0`, e.g., `mv LDC2013T19 ontonotes-release-5.0`. 
 
 #### Step 2: Running the script to recover words
 
