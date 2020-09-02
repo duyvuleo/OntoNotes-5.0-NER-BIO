@@ -20,7 +20,7 @@ $ conda create --name py27 python=2.7.10
 $ source activate py27
 ```
 
-First, unpack the skeleton files:
+First, download the skeleton files from [GDrive storage](https://drive.google.com/file/d/12qsQp5nT7F5ljdAvs_JgQYZw5m5jDL0V/view?usp=sharing) and unpack it:
 ```
 tar xvfz ontonotes-release-5.0.tar.gz
 ```
