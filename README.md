@@ -1,6 +1,6 @@
-# OntoNotes-5.0-NER-BIO
+# OntoNotes-5.0-NER-BIO (Multilingual Version) adapted from https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO
 
-This is a CoNLL-2003 formatted version with BIO tagging scheme of the OntoNotes 5.0 release for NER. This formatted version is based on the instructions [here](http://cemantix.org/data/ontonotes.html) and a new script created in this repo. 
+This is a CoNLL-2003 formatted version with BIO tagging scheme of the OntoNotes 5.0 release for NER in 3 languages (English, Arabic, Chinese). This formatted version is based on the instructions [here](http://cemantix.org/data/ontonotes.html) and a new script created in this repo. 
 
 Simply put, the paper named *[Towards Robust Linguistic Analysis using OntoNotes](http://www.aclweb.org/anthology/W13-3516)* (Yuchen Zhang, Zhi Zhong, CoNLL 2013), proposed a train-dev-split for the OntoNotes 5.0 data, and provided scripts for converting it to CoNLL 2012 format. However, the results are not in BIO tagging scheme and cannot be directly used in many sequence tagging architectures, such as BLSTM-CRFs. This repo simplifies your pre-processing by directly generated the BIO format and you can use them in your experiments.
 
@@ -32,4 +32,6 @@ You can deactive the envrionment now (`$ source deactivate`).
 
 #### Step 3: Combine the data and convert tags within BIO.
 
-Run `python3 agg.py` to obtain `onto.train.ner`, `onto.development.ner`, and `onto.test.ner`. （I only keep the first 50 lines as the examples here.)
+Run `python3 agg.py english` to obtain `onto.train.ner.english`, `onto.development.ner.english`, and `onto.test.ner.english` and `onto.conll-2012-test-official.english`.
+Run `python3 agg.py arabic` to obtain `onto.train.ner.arabic`, `onto.development.ner.arabic`, and `onto.test.ner.arabic` and `onto.conll-2012-test-official.arabic`.
+Run `python3 agg.py chinese` to obtain `onto.train.ner.chinese`, `onto.development.ner.chinese`, and `onto.test.ner.chinese` and `onto.conll-2012-test-official.chinese`.
